@@ -1,1 +1,11 @@
-.venv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+data/raw/*.csv
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/metrics.json

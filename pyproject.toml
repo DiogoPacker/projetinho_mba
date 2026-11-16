@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flightlab"
+version = "0.1.0"
+description = "Analytics, previsão de atrasos e assistente de dados de voos"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2,<4", "numpy>=2,<3", "scikit-learn>=1.6,<2",
+  "joblib>=1.4,<2", "fastapi>=0.115,<1", "uvicorn>=0.34,<1",
+  "streamlit>=1.45,<2", "plotly>=6,<7", "openai>=2,<3",
+  "python-dotenv>=1,<2", "httpx>=0.28,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+notebook = ["jupyterlab>=4,<5", "matplotlib>=3.10,<4", "seaborn>=0.13,<1"]
+
+[project.scripts]
+flightlab = "flightlab.cli:main"
+
+[project.urls]
+Repository = "https://github.com/DiogoPacker/projetinho_mba"
+Documentation = "https://github.com/DiogoPacker/projetinho_mba/tree/main/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

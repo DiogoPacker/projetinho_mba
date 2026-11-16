@@ -1,0 +1,159 @@
+{
+  "created_at": "2026-11-16T15:54:26.971654+00:00",
+  "sklearn_version": "1.9.1",
+  "features": [
+    "carrier",
+    "origin",
+    "dest",
+    "month",
+    "day_of_week",
+    "distance"
+  ],
+  "target": "arr_delay >= 15 minutos",
+  "decision_threshold": 0.5,
+  "quality": {
+    "raw_rows": 336776,
+    "usable_rows": 327346,
+    "excluded_rows": 9430,
+    "missing_arrival_delay": 9430,
+    "sha256": "325b991240fedb0a4931f192be5d91ca24822ff6de5f0cc96fee6c9611a8b5db",
+    "source": "https://raw.githubusercontent.com/JackyP/testing/master/datasets/nycflights.csv"
+  },
+  "partitions": {
+    "train": {
+      "rows": 212287,
+      "start": "2013-01-01",
+      "end": "2013-08-25"
+    },
+    "validation": {
+      "rows": 56341,
+      "start": "2013-08-26",
+      "end": "2013-10-26"
+    },
+    "test": {
+      "rows": 58718,
+      "start": "2013-10-27",
+      "end": "2013-12-31"
+    }
+  },
+  "limitations": [
+    "Base histórica de 2013; não validado para operação atual.",
+    "Sem clima, congestionamento ou horário programado na base original.",
+    "Voos sem atraso de chegada registrado são excluídos; não prevê cancelamento.",
+    "Probabilidade estimada; calibração não garantida em períodos futuros."
+  ],
+  "validation": {
+    "roc_auc": 0.568487785303088,
+    "average_precision": 0.19386232893305905,
+    "brier": 0.16023731840474004,
+    "precision_at_0_5": 0.22996515679442509,
+    "recall_at_0_5": 0.014727211871025327,
+    "prevalence": 0.15908485827372607
+  },
+  "baseline_validation": {
+    "roc_auc": 0.5,
+    "average_precision": 0.15908485827372607,
+    "brier": 0.1451711367800967,
+    "precision_at_0_5": 0.0,
+    "recall_at_0_5": 0.0,
+    "prevalence": 0.15908485827372607
+  },
+  "test": {
+    "roc_auc": 0.5767929706527853,
+    "average_precision": 0.3073621554730378,
+    "brier": 0.19428169898060274,
+    "precision_at_0_5": 0.39177215189873416,
+    "recall_at_0_5": 0.04209452567154029,
+    "prevalence": 0.25043427909669946
+  },
+  "baseline_test": {
+    "roc_auc": 0.5,
+    "average_precision": 0.25043427909669946,
+    "brier": 0.18795394244639976,
+    "precision_at_0_5": 0.0,
+    "recall_at_0_5": 0.0,
+    "prevalence": 0.25043427909669946
+  },
+  "global_coefficients": [
+    {
+      "feature": "categories__dest_CAE",
+      "coefficient": 0.8025110036647615
+    },
+    {
+      "feature": "categories__dest_OKC",
+      "coefficient": 0.795737712335486
+    },
+    {
+      "feature": "categories__dest_AVL",
+      "coefficient": -0.7607946552039381
+    },
+    {
+      "feature": "categories__dest_TUL",
+      "coefficient": 0.7511986884289269
+    },
+    {
+      "feature": "categories__dest_SNA",
+      "coefficient": -0.6133993477936083
+    },
+    {
+      "feature": "categories__dest_TYS",
+      "coefficient": 0.6023013120737916
+    },
+    {
+      "feature": "categories__carrier_AS",
+      "coefficient": -0.5881707690246251
+    },
+    {
+      "feature": "categories__carrier_YV",
+      "coefficient": 0.5767904630449975
+    },
+    {
+      "feature": "categories__dest_ACK",
+      "coefficient": -0.545833843181171
+    },
+    {
+      "feature": "categories__dest_MVY",
+      "coefficient": -0.5132594648440014
+    },
+    {
+      "feature": "categories__carrier_F9",
+      "coefficient": 0.4640599860932178
+    },
+    {
+      "feature": "categories__carrier_HA",
+      "coefficient": -0.4619416677603257
+    },
+    {
+      "feature": "categories__dest_STT",
+      "coefficient": -0.45570323551890535
+    },
+    {
+      "feature": "categories__dest_BDL",
+      "coefficient": -0.4528286235635102
+    },
+    {
+      "feature": "categories__dest_SMF",
+      "coefficient": 0.44305685168509
+    },
+    {
+      "feature": "categories__carrier_VX",
+      "coefficient": -0.4404826001063751
+    },
+    {
+      "feature": "categories__carrier_EV",
+      "coefficient": 0.4192988086653991
+    },
+    {
+      "feature": "categories__carrier_AA",
+      "coefficient": -0.37321442434544644
+    },
+    {
+      "feature": "categories__carrier_US",
+      "coefficient": -0.35133084787981994
+    },
+    {
+      "feature": "categories__carrier_DL",
+      "coefficient": -0.3390036702945746
+    }
+  ]
+}
