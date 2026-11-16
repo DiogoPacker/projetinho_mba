@@ -4,6 +4,15 @@ O ponto de entrada é [apps/dashboard.py](../apps/dashboard.py). Streamlit organ
 interface; Plotly fornece os gráficos interativos. Não é necessário iniciar a API
 para usar o dashboard.
 
+**Acesse a demo:** https://flightlab-dashboard.onrender.com
+
+Na primeira abertura, a mensagem **Preparando sua análise** e um avião animado
+acompanham a preparação dos dados e indicadores. A animação desaparece quando a
+interface termina de ser montada, sem impor um tempo artificial de espera. Ela respeita
+a preferência de movimento reduzido do navegador. Interações seguintes usam o cache.
+Se o serviço gratuito estiver adormecido, primeiro aparece a espera do próprio Render;
+o dashboard só pode mostrar sua animação depois que o serviço estiver disponível.
+
 ## Análise de dados
 
 Na barra lateral, selecione companhias, origens e intervalo de meses. Seleções vazias

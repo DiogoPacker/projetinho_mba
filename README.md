@@ -7,6 +7,12 @@
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](src/flightlab/api.py)
 [![CI](https://github.com/DiogoPacker/projetinho_mba/actions/workflows/ci.yml/badge.svg)](https://github.com/DiogoPacker/projetinho_mba/actions/workflows/ci.yml)
 
+### [🚀 Abrir o dashboard ao vivo](https://flightlab-dashboard.onrender.com)
+
+Demo hospedada no Render. No primeiro acesso após um período sem uso, o serviço pode
+levar cerca de um minuto para iniciar. Depois que a aplicação abre, uma animação de
+carregamento acompanha a preparação dos dados. Aguarde sem precisar atualizar a página.
+
 [Dashboard interativo](#dashboard-interativo) · [Executar localmente](#executar-no-windows) ·
 [Deploy no Render](#publicar-no-render) · [Documentação](docs/README.md) · [Evolução](docs/development.md)
 
@@ -47,9 +53,12 @@ Os gráficos permitem zoom, seleção de área e detalhes ao passar o mouse. Os 
 atualizam os indicadores e o contexto do assistente. O simulador utiliza o modelo
 salvo no treinamento, independentemente do recorte da análise.
 
-**Para experimentar:** execute localmente e abra http://localhost:8501.
-O deploy no Render está configurado neste repositório, mas **a URL pública ainda não foi publicada**.
-Após o deploy, adicione a URL real no campo **Website** da seção **About** do GitHub.
+**Demo pública:** https://flightlab-dashboard.onrender.com
+
+**Localmente:** execute o projeto e abra http://localhost:8501.
+A primeira preparação dos dados exibe uma tela de espera animada; os acessos seguintes
+aproveitam o cache enquanto o processo está ativo. A retomada de uma instância Free
+adormecida acontece antes dessa tela e é controlada pelo Render.
 
 [Guia de uso do dashboard →](docs/dashboard.md)
 

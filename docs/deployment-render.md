@@ -1,5 +1,7 @@
 # Publicar o FlightLab no Render
 
+**Demo publicada:** https://flightlab-dashboard.onrender.com
+
 ## Objetivo e configuração fornecida
 
 Publicar uma demonstração que qualquer visitante do GitHub possa abrir no navegador,
@@ -129,8 +131,11 @@ no README ou no histórico Git. `store=False` não significa ausência de cobran
 | Novo commit não gerou deploy | Verifique os checks do GitHub e a política `checksPass` |
 | Erro com artefato antigo | Faça novo build para treinar com as mesmas bibliotecas usadas no runtime |
 
-O deploy remoto não foi executado nesta entrega. A configuração é preparada e validada
-localmente; a URL e o consumo efetivo dependem da conta Render e do build remoto.
+A demo foi publicada pelo responsável pelo projeto no endereço acima. O consumo e a
+disponibilidade dependem da conta Render. A animação do dashboard acompanha a preparação
+dos dados depois que o Streamlit já está respondendo. Enquanto uma instância Free
+adormecida está reiniciando, a tela inicial pertence ao Render e não pode ser substituída
+pelo CSS da aplicação. Para evitar essa etapa, considere uma instância sempre ativa.
 
 ## Referências oficiais
 

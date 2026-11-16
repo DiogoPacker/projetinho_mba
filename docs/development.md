@@ -53,7 +53,8 @@ Publicação remota e integração com contas continuam sendo etapas operacionai
 
 ## Próximas entregas propostas
 
-- [ ] Validar o deploy remoto e colocar sua URL real no README/About.
+- [x] Publicar a demo no Render e registrar sua URL no README: https://flightlab-dashboard.onrender.com.
+- [ ] Adicionar o link público ao campo Website da seção About do GitHub.
 - [ ] Registrar capturas reais ou um vídeo curto da demonstração.
 - [ ] Adicionar features de horário programado e calendário cíclico.
 - [ ] Comparar modelos não lineares com validação em múltiplas janelas temporais.

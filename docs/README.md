@@ -28,5 +28,6 @@ usar a demonstração, entender o experimento e continuar o desenvolvimento.
 Dashboard, pipeline, treinamento, API e assistente estão implementados. O primeiro
 treino foi executado com a base real; os números estão no relatório versionável.
 A integração LLM é testada com provedor simulado. O uso real depende de credencial.
-Render e GitHub Actions têm configuração no código; a publicação e a execução remota
-precisam acontecer nas respectivas contas. Não há URL de produção confirmada nesta entrega.
+A demonstração foi publicada pelo responsável pelo projeto no Render:
+https://flightlab-dashboard.onrender.com. A execução remota do CI pode ser consultada
+no badge e na aba Actions do GitHub.
