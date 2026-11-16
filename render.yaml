@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+services:
+  - type: web
+    name: flightlab-dashboard
+    runtime: python
+    plan: free
+    buildCommand: bash scripts/render-build.sh
+    startCommand: python -m streamlit run apps/dashboard.py --server.address 0.0.0.0 --server.port $PORT --server.headless true
+    healthCheckPath: /_stcore/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: FLIGHTLAB_ENABLE_LLM
+        value: "false"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
