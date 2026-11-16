@@ -8,17 +8,18 @@ from openai import OpenAIError
 from flightlab.analytics import ranking, summary
 from flightlab.assistant import answer, llm_enabled
 from flightlab.data import load
+from flightlab.loading import LOADING_HTML
 from flightlab.model import load_model, predict
 
 st.set_page_config(page_title="FlightLab | Dados & IA", page_icon="✈️", layout="wide")
 
 
-@st.cache_data
+@st.cache_data(show_spinner=False)
 def get_data():
     return load()
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def get_model():
     return load_model()
 
@@ -26,9 +27,13 @@ def get_model():
 st.title("✈️ FlightLab")
 st.caption("Um laboratório de análise, ciência de dados e engenharia de IA com Python")
 st.info("Dados históricos de 2013. Atraso = chegada com 15 minutos ou mais. Uso educacional.")
+loading = st.empty()
+if not st.session_state.get("flightlab_ready", False):
+    loading.markdown(LOADING_HTML, unsafe_allow_html=True)
 try:
     df, quality = get_data()
 except (FileNotFoundError, ValueError) as error:
+    loading.empty()
     st.error(str(error))
     st.stop()
 
@@ -177,3 +182,6 @@ with about:
     **Desenvolvedor Python:** pacote, CLI, API FastAPI, validação de contratos e testes.
     """)
     st.json(quality)
+
+loading.empty()
+st.session_state["flightlab_ready"] = True
